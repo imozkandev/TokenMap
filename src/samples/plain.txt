@@ -1,0 +1,10 @@
+Sen tecrübeli bir kıdemli yazılım mimarısın. Aşağıda belirtilen gereksinimler doğrultusunda mikroservis mimarisinden olay tabanlı (event-driven) yapıya geçiş stratejisi hazırlamanı istiyorum.
+
+Blok 1 - Sistem Mimarisi Arka Planı:
+Mevcut durumda 15 farklı REST tabanlı mikroservisimiz bulunmaktadır. Servisler arası senkron HTTP çağrıları gecikme sürelerini (latency) artırmakta ve bağımlı servislerden biri çöktüğünde tüm sipariş akışı durmaktadır. Bu kilitlenmeleri çözmek amacıyla Apache Kafka veya RabbitMQ tabanlı bir mesaj kuyruğu yapısına geçiş yapmayı hedefliyoruz.
+
+Blok 2 - Veri Tutarlılığı ve Saga Deseni:
+Dağıtık işlemlerde (distributed transactions) 2-Phase Commit yerine Saga deseni kullanılacaktır. Sipariş oluşturma, ödeme alma ve stok düşme adımlarının her biri telafi edici işlemler (compensating transactions) ile desteklenmelidir.
+
+Blok 3 - İzleme ve Loglama Standartları:
+Dağıtık izleme (distributed tracing) için OpenTelemetry entegrasyonu şarttır. Her olaya benzersiz bir traceId ve correlationId atanarak sistem genelindeki mesaj akışı görünür kılınmalıdır.

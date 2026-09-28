@@ -1,0 +1,89 @@
+[
+  {
+    "id": "gpt-4o",
+    "label": "OpenAI GPT-4o",
+    "contextWindow": 128000,
+    "tokenizer": "exact"
+  },
+  {
+    "id": "gpt-4o-mini",
+    "label": "OpenAI GPT-4o Mini",
+    "contextWindow": 128000,
+    "tokenizer": "exact"
+  },
+  {
+    "id": "gpt-4-turbo",
+    "label": "OpenAI GPT-4 Turbo",
+    "contextWindow": 128000,
+    "tokenizer": "exact"
+  },
+  {
+    "id": "gpt-3.5-turbo",
+    "label": "OpenAI GPT-3.5 Turbo",
+    "contextWindow": 16385,
+    "tokenizer": "exact"
+  },
+  {
+    "id": "claude-3-5-sonnet",
+    "label": "Anthropic Claude 3.5 Sonnet",
+    "contextWindow": 200000,
+    "tokenizer": "approx",
+    "approxFactor": 1.05
+  },
+  {
+    "id": "claude-3-opus",
+    "label": "Anthropic Claude 3 Opus",
+    "contextWindow": 200000,
+    "tokenizer": "approx",
+    "approxFactor": 1.05
+  },
+  {
+    "id": "claude-3-haiku",
+    "label": "Anthropic Claude 3 Haiku",
+    "contextWindow": 200000,
+    "tokenizer": "approx",
+    "approxFactor": 1.05
+  },
+  {
+    "id": "gemini-1.5-pro",
+    "label": "Google Gemini 1.5 Pro",
+    "contextWindow": 2000000,
+    "tokenizer": "approx",
+    "approxFactor": 1.0
+  },
+  {
+    "id": "gemini-1.5-flash",
+    "label": "Google Gemini 1.5 Flash",
+    "contextWindow": 1000000,
+    "tokenizer": "approx",
+    "approxFactor": 1.0
+  },
+  {
+    "id": "gemini-2.0-flash",
+    "label": "Google Gemini 2.0 Flash",
+    "contextWindow": 1000000,
+    "tokenizer": "approx",
+    "approxFactor": 1.0
+  },
+  {
+    "id": "llama-3.3-70b",
+    "label": "Meta Llama 3.3 70B",
+    "contextWindow": 128000,
+    "tokenizer": "approx",
+    "approxFactor": 1.0
+  },
+  {
+    "id": "llama-3.1-405b",
+    "label": "Meta Llama 3.1 405B",
+    "contextWindow": 128000,
+    "tokenizer": "approx",
+    "approxFactor": 1.0
+  },
+  {
+    "id": "custom",
+    "label": "Özel (kendim gireceğim)",
+    "contextWindow": 128000,
+    "tokenizer": "approx",
+    "approxFactor": 1.0
+  }
+]

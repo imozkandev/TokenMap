@@ -1,0 +1,35 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Sen şirket veri tabanına erişimi olan yetkili bir analist asistansın. Kullanıcı sorularına araçları kullanarak güncel verilerle yanıt ver."
+    },
+    {
+      "role": "user",
+      "content": "2026 yılı üçüncü çeyreğine ait bölge bazlı satış raporunu ve en yüksek ciro yapan 3 ürünü listeler misin?"
+    },
+    {
+      "role": "assistant",
+      "content": "Gerekli verileri almak için şirket satış veri tabanını sorguluyorum.",
+      "tool_calls": [
+        {
+          "id": "call_98f72a11",
+          "type": "function",
+          "function": {
+            "name": "query_sales_db",
+            "arguments": "{\"quarter\": \"Q3-2026\", \"metrics\": [\"revenue\", \"top_products\"], \"groupBy\": \"region\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_98f72a11",
+      "content": "{\n  \"status\": \"success\",\n  \"data\": {\n    \"quarter\": \"Q3-2026\",\n    \"regions\": [\n      {\"name\": \"Marmara\", \"totalRevenue\": 4520000, \"activeClients\": 340},\n      {\"name\": \"Ege\", \"totalRevenue\": 2180000, \"activeClients\": 185},\n      {\"name\": \"İç Anadolu\", \"totalRevenue\": 1950000, \"activeClients\": 160},\n      {\"name\": \"Akdeniz\", \"totalRevenue\": 1420000, \"activeClients\": 110}\n    ],\n    \"topProducts\": [\n      {\"rank\": 1, \"sku\": \"PRD-9901\", \"name\": \"Bulut Veri Sunucusu Pro\", \"revenue\": 2800000},\n      {\"rank\": 2, \"sku\": \"PRD-4412\", \"name\": \"Yapay Zeka Analiz Paketi\", \"revenue\": 1950000},\n      {\"rank\": 3, \"sku\": \"PRD-1020\", \"name\": \"Kurumsal Güvenlik Lisansı\", \"revenue\": 1400000}\n    ]\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "2026 Q3 satış verileri başarıyla analiz edildi:\n\n**Bölge Bazlı Satış Özeti:**\n1. **Marmara:** 4.520.000 TL (340 aktif müşteri)\n2. **Ege:** 2.180.000 TL (185 aktif müşteri)\n3. **İç Anadolu:** 1.950.000 TL (160 aktif müşteri)\n4. **Akdeniz:** 1.420.000 TL (110 aktif müşteri)\n\n**En Yüksek Ciro Yapan Top 3 Ürün:**\n- **Bulut Veri Sunucusu Pro:** 2.800.000 TL\n- **Yapay Zeka Analiz Paketi:** 1.950.000 TL\n- **Kurumsal Güvenlik Lisansı:** 1.400.000 TL"
+    }
+  ]
+}

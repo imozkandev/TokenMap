@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none';" />
+    
+    <title>Token Haritası - LLM Context Penceresi Treemap Analizi</title>
+    <meta name="description" content="LLM sohbet JSON verilerini ve prompt metinlerini %100 yerel tarayıcıda analiz edin, token kullanımını kategori bazlı treemap olarak görselleştirin." />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Token Haritası - LLM Context Penceresi Treemap Analizi" />
+    <meta property="og:description" content="Veriniz tarayıcınızdan çıkmadan LLM context penceresi haritanızı çıkarın." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/favicon.svg" />
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: sans-serif; background-color: #ef4444; color: white;">
+        Bu uygulama çalışabilmek için JavaScript gerektirir. Lütfen tarayıcınızda JavaScript'i etkinleştirin.
+      </div>
+    </noscript>
+
+    <div id="app">
+      <h1>Token Haritası</h1>
+    </div>
+
+    <!-- Ekran Okuyucular İçin Duyuru Bölgesi (a11y) -->
+    <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

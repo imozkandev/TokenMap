@@ -1,0 +1,23 @@
+{
+  "system": "Sen verilen belgeleri analiz ederek kullanıcı sorularını yanıtlayan uzman bir teknik dokümantasyon asistanısın. Yalnızca sağlanan bağlam bilgilerini temel al.",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Aşağıdaki teknik dokümantasyon belgelerini inceleyerek veritabanı yedekleme prosedürünü adım adım açıklar mısın?\n\n<documents>\n<document id=\"doc-1\">\nVeritabanı Günlük Otomatik Yedekleme Yönergesi:\n1. Her gece 02:00'de otomatik anlık görüntü (snapshot) alınır.\n2. Alınan snapshot nesne depolama hizmetine (S3-compatible) şifreli olarak aktarılır.\n3. Şifreleme anahtarı KMS servisinde saklanır.\n</document>\n<document id=\"doc-2\">\nFelaket Kurtarma (Disaster Recovery) Adımları:\n- Yedi günden eski yedekler soğuk depolamaya (glacier) taşınır.\n- Geri yükleme testleri her ayın ilk pazartesi günü otomatize script ile simüle edilir.\n</document>\n</documents>"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sağlanan dokümantasyona göre veritabanı yedekleme ve kurtarma prosedürleri şu şekildedir:\n\n1. **Gece Otomatik Snapshot:** Her gece saat 02:00'de otomatik veritabanı anlık görüntüsü oluşturulur.\n2. **Şifreli Depolama:** Alınan yedekler KMS şifreleme anahtarları kullanılarak nesne depolama alanına aktarılır.\n3. **Arşivleme ve Kurtarma:** 7 günden eski yedekler soğuk depolamaya aktarılır ve her ayın ilk pazartesi günü geri yükleme simülasyonu çalıştırılır."
+        }
+      ]
+    }
+  ]
+}

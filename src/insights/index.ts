@@ -1,0 +1,2 @@
+// Insights module placeholder
+export {};
